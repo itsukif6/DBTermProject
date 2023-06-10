@@ -1,6 +1,7 @@
-SELECT product_name, quantity
-FROM inventory
+INSERT INTO Storehouse (ID, Replenishment, InStock, Address)
+VALUES ('6', 'Product F', '520', 'Address 6');
 
-
-INSERT INTO inventory (product_name, quantity, entry_date)
-VALUES ('商品名稱', 100, '2023-06-06')
+-- 更新庫存量
+UPDATE Storehouse
+SET InStock = InStock + 520
+WHERE ID = '6';
