@@ -1,7 +1,10 @@
-SELECT c.customer_id, c.customer_name
-FROM customers c
-JOIN orders o ON c.customer_id = o.customer_id
-WHERE o.order_date >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR)
-GROUP BY c.customer_id, c.customer_name
-ORDER BY SUM(o.order_total) DESC
+SELECT  c.ID
+       ,c.Name
+FROM Customers c
+JOIN PurchaseRecords p
+ON c.ID = p.CustomerID
+WHERE p.Date >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR)
+GROUP BY  c.ID
+         ,c.Name
+ORDER BY SUM(p.Amount) DESC
 LIMIT 1;
