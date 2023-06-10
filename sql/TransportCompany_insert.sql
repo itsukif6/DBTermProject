@@ -1,7 +1,7 @@
-INSERT INTO TransportCompany (ID, TrackNumber, Number, Name)
+INSERT INTO TransportCompany (ID, TrackNumber, Number, Name, ShippingDays, PackageDate)
 VALUES
-    (1, 'TRK1234567890123', 'TC12345678', 'Company A'),
-    (2, 'TRK9876543210987', 'TC98765432', 'Company B'),
-    (3, 'TRK5555666677778', 'TC55556666', 'Company C'),
-    (4, 'TRK4444333322221', 'TC44443333', 'Company D'),
-    (5, 'TRK6666777788889', 'TC66667777', 'Company E');
+    (1, 'TRK12345678', 'C1234', 'Company A', 3, '2023-06-01'),
+    (2, 'TRK98765432', 'C5678', 'Company B', 5, '2023-06-01'),
+    (3, 'TRK55556666', 'C9101', 'Company C', 2, '2023-06-01'),
+    (4, 'TRK44443333', 'C1121', 'Company D', 4, '2023-05-25'),
+    (5, 'TRK66667777', 'C3141', 'Company E', 6, '2023-05-25');
