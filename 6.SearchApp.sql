@@ -1,3 +1,4 @@
-SELECT store_name, address, inventory
-FROM stores
-WHERE location = '本地' OR location = '附近'
+SELECT p.Name, s.Name, s.Address, p.Inventory
+FROM Product p
+JOIN Shop s ON p.ShopID = s.ID
+WHERE s.location = '本地' OR s.location = '附近';
