@@ -1,7 +1,7 @@
-SELECT name, phone, order_details
-FROM customers
+SELECT c.Name, c.ID, c.Address, a.Number, a.PaymentMethod
+FROM Customers c
+JOIN CustomerAccounts a ON c.AccountID = a.ID;
 
 
--- 假設有個名為"orders"的數據庫，包含客戶ID(12345)、訂單日期(2023-06-06)和訂單細節
-INSERT INTO orders (customer_id, order_date, order_details)
-VALUES ('12345', '2023-06-06', '訂單細節')
+INSERT INTO CustomerAccounts(ID, Password, Number, HolderName, PaymentMethod)
+VALUES (6, 'password6', '7777444466665555', 'Lin Li san', 'Line Pay');
